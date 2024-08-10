@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', 'sans-serif';
+}
+
+body {
+  height: 100vh;
+  background-color: black;
+  background-image: url('../assets/images/vegetables_background.jpg');
+  background-size: cover;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+
+/* Header */
+
+header {
+  position: relative;
+  padding: 3rem 4rem;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  /* max-width: 1200px; */
+  /* margin: 2rem 2rem; */
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 6rem;
+  font-size: 30px;
+  text-shadow: 2px 2px black;
+}
+
+.navbar .links li a:hover {
+  display: flex;
+  gap: 6rem;
+  font-size: 30px;
+  text-shadow: 2px 2px black;
+  color: orangered;
+  scale: 1.1;
+  transition: 1s;
+}
+
+.action_btn {
+  color: white;
+  font-size: 30px;
+  background-color: rgba(102, 0, 0, 0.8);
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+}
+
+.action_btn:hover {
+  scale: 1.1;
+  color: orangered;
+  transition: 1s;
+}
+
+/* .action_btn:active {
+  scale: 0.95;
+} */
+
+.navbar .toggle_btn {
+  color: white;
+  font-size: 3rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Dropdown Menu*/
+
+.dropdown_menu {
+  z-index: 1000;
+  display: none;
+  position: absolute;
+  right: 4rem;
+  top: 8rem;
+  height: 0;
+  width: 250px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu li a {
+  font-size: 28px;
+  /* text-shadow: 1px 1px black; */
+  color: white;
+  /* font-weight: bold; */
+}
+
+.dropdown_menu li a:hover {
+  scale: 1.1;
+  color: orangered;
+  transition: 1s;
+}
+
+.dropdown_menu.open {
+  height: 250px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 28px;
+  background-color: rgba(102, 0, 0, 0.8);
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+/* SCAN PAGE */
+.scanbox {
+  z-index: 1;
+  width: 90%;
+  height: 80%;
+  /* height: calc(100vh - 60px); */
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 20px;
+  /* margin-top: auto;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto; */
+  margin: 20px auto;
+  /* margin: auto; */
+  border-radius: 30px;
+  display: flex;
+  overflow: scroll;
+}
+
+.left {
+  height: 100%;
+  flex: 40%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  height: 100%;
+  flex: 60%;
+
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+#upload-btn {
+  color: white;
+  font-size: 28px;
+  background-color: rgba(102, 0, 0, 0.8);
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  height: 80px;
+}
+
+#upload-btn:hover {
+  /* scale: 1.1; */
+  transition: 1s;
+  background-color: white;
+  font-size: 28px;
+  color: rgba(102, 0, 0, 0.8);
+}
+
+#output {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: none;
+}
+
+.food-title {
+  font-size: 40px;
+  /* font-weight: bold; */
+}
+
+.input-group {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  /* display: none; */
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"] {
+  padding: 10px 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-right: 50px;
+  font-size: 28px;
+  color: black;
+}
+
+#submit-btn {
+  color: white;
+  font-size: 28px;
+  background-color: rgba(102, 0, 0, 0.8);
+  padding: 0.7rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+#submit-btn:hover {
+  /* scale: 1.1; */
+  transition: 1s;
+  background-color: white;
+  /* font-size: 30px; */
+  color: rgba(102, 0, 0, 1);
+}
+
+.macros {
+  /* height: 65%;
+  width: 85%; */
+
+  width: 100%;
+  display: flex;
+  margin-top: 70px;
+  font-size: 28px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* .leftmacros,
+.rightmacros {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.leftmacros {
+  /* height: 100%; */
+  flex: 50%;
+
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  /* border-right: 1mm dotted white; */
+}
+
+.rightmacros {
+  /* height: 100%; */
+  flex: 50%;
+
+  /* display: flex; */
+  display: none;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+}
+
+#calories1,
+#calories2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#piechart1,
+#piechart2 {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+@media (max-width: 1300px) {
+  .scanbox {
+    flex-direction: column;
+  }
+
+  .left {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .scanbox {
+    flex-direction: column;
+  }
+
+  .left {
+    margin-bottom: 50px;
+  }
+
+  .food-title {
+    font-size: 28px;
+  }
+
+  .input-group input[type="text"],
+  .input-group input[type="number"] {
+    font-size: 18px;
+    padding: 10px 10px;
+    margin-right: 20px;
+  }
+
+  #submit-btn {
+    font-size: 18px;
+    padding: 0.7rem 1.0rem;
+  }
+
+  .macros {
+    font-size: 20px;
+  }
+
+  #piechart1,
+  #piechart2 {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+/* CALENDAR */
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

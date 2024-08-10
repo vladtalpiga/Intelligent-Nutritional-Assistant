@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="../css/slider.css"/>
+	<title>NutriCam Home</title>
+</head>
+<body>
+	<header>
+		<div class="navbar">
+			<div class="logo">
+				<a href="home.html">
+					<img src="../assets/images/logo.png" alt="NutriCam" width="110px" height="110px"/>
+				</a>
+			</div>
+			<ul class="links">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="scan.html">Scan</a></li>
+				<li><a href="calendar.html">Calendar</a></li>
+			</ul>
+			<a href="profile.html" class="action_btn">Profile</a>
+			
+			<div class="toggle_btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+
+		<div class="dropdown_menu">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="scan.html">Scan</a></li>
+			<li><a href="calendar.html">Calendar</a></li>
+			<li><a href="profile.html" class="action_btn">Profile</a></li>
+		</div>
+	</header>
+
+	<!-- Slider -->
+
+	<div class="slider">
+		<!-- List Items -->
+		<div class="list">
+				<div class="item active">
+						<img src="../assets/images/nutri3.jpg">
+						<div class="content">
+							<p>NutriCam</p>
+								<h2>AI Nutritionist</h2>
+								<p>
+									Achieve your fitness goals efficiently with the support of our advanced nutritional assistant.
+								</p>
+						</div>
+				</div>
+				<div class="item">
+						<img src="../assets/images/nutri7.jpg">
+						<div class="content">
+								<p>NutriCam</p>
+								<h2>Healthy Lifestyle</h2>
+								<p>
+									Track your daily caloric and macronutrient intake to cultivate a healthy lifestyle.
+								</p>
+								<div class="input-group">
+									<input type="number" placeholder="Enter calorie goal" />
+									<button class="submit-btn-calories">Submit</button>
+								</div>
+						</div>
+				</div>
+		</div>
+		<!-- Button Arrows -->
+		<div class="arrows">
+				<button id="prev"><</button>
+				<button id="next">></button>
+		</div>
+		<!-- Thumbnail -->
+		<div class="thumbnail">
+				<div class="item active">
+						<img src="">
+						<div class="content">
+						</div>
+				</div>
+				<div class="item">
+						<img src="">
+						<div class="content">
+						</div>
+				</div>
+		</div>
+	</div>
+
+
+	<script src="../scripts/script.js"></script>
+	<script src="../scripts/slider.js"></script>
+
+</body>
+</html>

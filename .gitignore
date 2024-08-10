@@ -1,0 +1,6 @@
+*.pkl
+*.jpg
+*.jpeg
+*.png
+*.webp
+test_images/
